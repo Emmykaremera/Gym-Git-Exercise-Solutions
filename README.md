@@ -135,6 +135,20 @@ branch 'main' set up to track 'origin/main'.
 
 A@emmyb23 MINGW64 ~/git-exercise (main)
 $
+A@emmyb23 MINGW64 ~/git-exercise (dev)
+$ git checkout -b test
+Switched to a new branch 'test'
+
+A@emmyb23 MINGW64 ~/git-exercise (test)
+$ git checkout dev
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.        
+
+A@emmyb23 MINGW64 ~/git-exercise (dev)
+$ git branch -d test
+Deleted branch test (was 130c3c7).
+
+A@emmyb23 MINGW64 ~/git-exercise (dev)
 ```
 
 ### Exercise 2
