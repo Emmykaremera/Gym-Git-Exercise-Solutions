@@ -313,3 +313,200 @@ $
 
 ```bash
 
+A@emmyb23 MINGW64 ~/git-exercise (ft/team-page)
+$ git --version
+git version 2.47.0.windows.2
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/team-page)
+$
+ *  History restored 
+
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/team-page)
+$ git checkout ft/faq-page
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.   
+Aborting
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/team-page)
+$ git commit -m "Updated README before switching branches"
+On branch ft/team-page
+Your branch is up to date with 'origin/ft/team-page'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")      
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/team-page)
+$ git checkout ft/faq-page
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.   
+Aborting
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/team-page)
+$ git push 
+Everything up-to-date
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/team-page)
+$ git commit -m "Updated README before switching branches"
+On branch ft/team-page
+Your branch is up to date with 'origin/ft/team-page'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")      
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/team-page)
+$ git push
+Everything up-to-date
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/team-page)
+$ git checkout ft/faq-page
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.   
+Aborting
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/team-page)
+$ git stash
+Saved working directory and index state WIP on ft/team-page: 69c4c03 Update README.md
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/team-page)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+A@emmyb23 MINGW64 ~/git-exercise (main)
+$ git add .
+
+A@emmyb23 MINGW64 ~/git-exercise (main)
+$ git commit -m "Added a paragraph in home file"
+[main 74cb072] Added a paragraph in home file
+ 1 file changed, 1 insertion(+)
+
+A@emmyb23 MINGW64 ~/git-exercise (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 567 bytes | 189.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.   
+To https://github.com/Emmykaremera/Gym-Git-Exercise-Solutions.git      
+   ae7d076..74cb072  main -> main
+
+A@emmyb23 MINGW64 ~/git-exercise (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git fetch origin
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git rebase origin/main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.     
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git add .
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git commit -m "I made changes in home file"
+[ft/home-page-redesign 054a2af] I made changes in home file
+ 1 file changed, 1 insertion(+)
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking      
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.28 KiB | 262.00 KiB/s, done.
+Total 12 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+visiting:
+
+A@emmyb23 MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+A@emmyb23 MINGW64 ~/git-exercise (main)
+$ git remote add git-copy https://github.com/Emmykaremera/Project-copy.git
+
+A@emmyb23 MINGW64 ~/git-exercise (main)
+$ git remote -v
+git-copy        https://github.com/Emmykaremera/Project-copy.git (fetch)
+git-copy        https://github.com/Emmykaremera/Project-copy.git (push)origin  https://github.com/Emmykaremera/Gym-Git-Exercise-Solutions.git 
+(fetch)
+origin  https://github.com/Emmykaremera/Gym-Git-Exercise-Solutions.git 
+(push)
+
+A@emmyb23 MINGW64 ~/git-exercise (main)
+$ git add .
+
+A@emmyb23 MINGW64 ~/git-exercise (main)
+$ git commit -m "Updated about file"
+[main bfb6fd8] Updated about file
+ 2 files changed, 160 insertions(+)
+
+A@emmyb23 MINGW64 ~/git-exercise (main)
+$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 2.34 KiB | 599.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.   
+To https://github.com/Emmykaremera/Gym-Git-Exercise-Solutions.git      
+   74cb072..bfb6fd8  main -> main
+
+A@emmyb23 MINGW64 ~/git-exercise (main)
+$ git push git-copy main
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (26/26), 5.43 KiB | 370.00 KiB/s, done.
+Total 26 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (7/7), done.
+To https://github.com/Emmykaremera/Project-copy.git
+ * [new branch]      main -> main
+
+A@emmyb23 MINGW64 ~/git-exercise (main)
+$
+```
+
+## Bundle 4
+### Exercise 2
+
+
+```bash
+
+
